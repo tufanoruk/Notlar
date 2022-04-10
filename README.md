@@ -19,3 +19,5 @@ Yazılım geliştiren bir kişinin programlama dili yanında mutlaka onun derley
 [VSCode](VSCode.md)
 [Git](Git.md)
 [Docker](Docker.md)
+[Kodlama Pratiği](KodlamaPratiği.md)
+[Kaynaklar](Kaynaklar.md)

@@ -17,8 +17,13 @@ Yazılım geliştiren bir kişinin programlama dili yanında mutlaka onun derley
 ## İçerik
 
 [VSCode](VSCode.md)
+
 [Git](Git.md)
+
 [Docker](Docker.md)
+
 [Kodlama Pratiği](KodlamaPrati%C4%9Fi.md)
+
 [Yazılım Mühendisliği](Yaz%C4%B1l%C4%B1mM%C3%BChendisli%C4%9Fi.md)
+
 [Kaynaklar](Kaynaklar.md)

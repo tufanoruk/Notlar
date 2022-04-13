@@ -28,7 +28,7 @@ Yazılım geliştiren bir kişinin programlama dili yanında mutlaka onun derley
 
 [Kaynaklar](Kaynaklar.md)
 
-[Projeler](https://github.com/tufanoruk)
+[Projelerden seçmeler](https://github.com/tufanoruk)
 | Proje | Teknoloji | Not
 |:---|:---|:---|
 |[Mosquito performans](https://github.com/tufanoruk/mosq_perf)|C / MQTT|MQTT açık kaynak gelişitrmesi olan mosquito için gecikme, jitter ölçümü|

@@ -31,9 +31,9 @@ Yazılım geliştiren bir kişinin programlama dili yanında mutlaka onun derley
 [Projelerden seçmeler](https://github.com/tufanoruk)
 | Proje | Teknoloji | Not
 |:---|:---|:---|
-|[Mosquito performans](https://github.com/tufanoruk/mosq_perf)|C / MQTT|MQTT açık kaynak gelişitrmesi olan mosquito için gecikme, jitter ölçümü|
-|[Kasa](https://github.com/tufanoruk/Kasa) | Python / AWS S3 |  Amazon S3 ve yerel makineye dosyaların yerelde şifrelenerek etkin şekilide yedeklenmesi|
-|[PlatformData](https://github.com/tufanoruk/PlatformData) | Python / node / PubSub / MQTT / Web | Girilen rota, sürat ve mevki bilgisine göre platformnu ilerleten ve MQTT pubsub mekanizması ile bunu internet tarayıcı istemcilere dağıtan bir deneme|
-|[HostPing](https://github.com/tufanoruk/HostPing)|Perl / JS / C / Apache / HTML | Ping için basit bir web arayüzü. Teknoloji entegrasyon gösterimi|
-|[Find Furthest Number](https://github.com/tufanoruk/ffn)|C++17 / Boost asio | İşe alımlarda uygulana yetenek / algılama testlerinde biri |
-|[WordleHelper](https://github.com/tufanoruk/WordleHelper)|Python|Worlde kelme bulma oyununu oynerken kelime bulmaya yardımcı olan bir uygulama|
+|[Mosquito performans](https://github.com/tufanoruk/mosq_perf)|C / MQTT|MQTT açık kaynak gelişitrmesi olan mosquito için gecikme, jitter ölçümü.|
+|[Kasa](https://github.com/tufanoruk/Kasa) | Python / AWS S3 |  Amazon S3 ve yerel makineye dosyaların yerelde şifrelenerek etkin şekilde yedeklenmesi.|
+|[PlatformData](https://github.com/tufanoruk/PlatformData) | Python / node / PubSub / MQTT / Web | Girilen rota, sürat ve mevki bilgisine göre platformu ilerleten ve MQTT pubsub mekanizması ile bunu Internet tarayıcı istemcilere dağıtan bir deneme.|
+|[HostPing](https://github.com/tufanoruk/HostPing)|Perl / JS / C / Apache / HTML | Ping için basit bir web arayüzü. Teknoloji entegrasyon gösterimi.|
+|[Find Furthest Number](https://github.com/tufanoruk/ffn)|C++17 / Boost asio | İşe alımlarda uygulanan yetenek / algılama testlerinden biri. |
+|[WordleHelper](https://github.com/tufanoruk/WordleHelper)|Python|Worlde kelime bulma oyununu oynarken kelime bulmaya yardımcı olan bir uygulama.|

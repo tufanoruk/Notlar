@@ -3,7 +3,9 @@
 Servis "Docker"laştırmayı öğrenmek için uzun zaman önce bir kaç teknolojinin entegrasyonu tecrübesi için yaptığım [HostPing](https://github.com/tufanoruk/HostPing) servisi ile çalışmaya karar verdim. Bu servisi seçmemin nedeni gayet basit ama farklı teknolojileri (apache http, js, perl, gcc) içeriyor olması.
 
 Önce iki tanımı vereyim.
+
 **İmaj** : Bir plana göre (Docker  File) Container içeriğini taşıyan dosyalar bütünü
+
 **Container**:  Çalışan imaj
 
 HostPing apache (ya da bezeri) webserver üzerinde çalışan, girilen IP/FQDN'e erişim kontrol ederek sonucu gösteren basit bir servis. Ön yüz (frontend) Twitter [bootstrap](https://getbootstrap.com/1.0.0/), [JQuery](https://jquery.com/) kullanıyor. Arka yüz (backend) Perl (perl ICMP root hakkı gerektirdiği için basit bir setuid sarmalayıcı -wrapper- uygulama ile tetiklenen) ile yazılmış "[Richardson  Maturity Level](https://martinfowler.com/articles/richardsonMaturityModel.html) 0" bir REST servisi.

@@ -55,7 +55,7 @@ CMD ["httpd", "-DFOREGROUND" ]
 
 2-6. satırlarda gerekli uygulama ve modüller bu temel linux imajına kuruluyor.
 
-7-9. satırlarda uygulama içeriği imajda, uygun yerlere kopyalanıyor.
+7-9. satırlarda uygulama içeriği imajda uygun yerlere kopyalanıyor.
 
 10-12. satırlarda Perl arkayüz uygumalasını setuid olarak çalıştıracak C kodu derleniyor.
 
@@ -67,7 +67,7 @@ CMD ["httpd", "-DFOREGROUND" ]
 
 17\. satırda da httpd uygulaması çalıştırılıyor.
 
-Container, Docker File'ın son ve tek olması gereken "CMD" satırını icra ettikten sonra sonlanıyor. Normalde daemon olarak arka planda (background) çalışması gereken httpd, container çalıştığına sonlanmaması için önplnada (foragroud) çalıştırılıyor.
+Container, Docker File'ın son ve tek olması gereken "CMD" satırını icra ettikten sonra sonlanıyor. Normalde daemon olarak arka planda (background) çalışması gereken httpd, container çalıştığına sonlanmaması için önplanda (foragroud) çalıştırılıyor.
 
 Imajın ufak olmasını sağlamak için oldukça küçük bir linux dağıtımından başlamış olsam da sonunda imaj büyüklüğü 244MB oldu!
 

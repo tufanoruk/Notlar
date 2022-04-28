@@ -1,6 +1,6 @@
 # Servis "Docker"laştırma
 
-Servis "Docker"laştırmayı öğrenmek için uzun zaman önce bir kaç teknolojinin entegrasyonu tecrübesi için yaptığım [HostPing](https://github.com/tufanoruk/HostPing) servisi ile çalışmaya karar verdim. Bu servisi seçmemin nedeni gayet basit ama farklı teknolojileri (apache http, js, perl, gcc) içeriyor olması. 
+Servis "Docker"laştırmayı öğrenmek için uzun zaman önce bir kaç teknolojinin entegrasyonu tecrübesi için yaptığım [HostPing](https://github.com/tufanoruk/HostPing) servisi ile çalışmaya karar verdim. Bu servisi seçmemin nedeni gayet basit ama farklı teknolojileri (apache http, js, perl, gcc) içeriyor olması.
 
 HostPing apache (ya da bezeri) webserver üzerinde çalışan, girilen IP/FQDN'e erişim kontrol ederek sonucu gösteren basit bir servis. Ön yüz (frontend) Twitter [bootstrap](https://getbootstrap.com/1.0.0/), [JQuery](https://jquery.com/) kullanıyor. Arka yüz (backend) Perl (perl ICMP root hakkı gerektirdiği için basit bir setuid sarmalayıcı -wrapper- uygulama ile tetiklenen) ile yazılmış "[Richardson  Maturity Level](https://martinfowler.com/articles/richardsonMaturityModel.html) 0" bir REST servisi.
 
@@ -24,7 +24,6 @@ dosyalar
 - ve proje dosyaları (perl backend uygulaması ve wrapper, hostping.html, js modülleri, css vs)
 
 Temel imaj olarak önce [apache httpd](https://hub.docker.com/_/httpd) imajını kullanmak istedim. Ancak imaja servisin çalışması için gerekli Perl modüllerinin ve derleme ortamının kurulmasının zorluğu nedeniyle en temel [alpine linux](https://hub.docker.com/_/alpine) imajı ile devam ettim. Ortaya çıkan Docker file aşağıda (en son hali için proje dizinine bakabilirsiniz).
-
 
 ```Docker {.line-numbers}
 FROM alpine:3.15
@@ -71,4 +70,4 @@ Yapılan imaj aşağıdaki komutla çalıştırılır
 % docker run --rm -it hostping:latest
 ```
 
-Internet tarayıcınızla http://localhost/hostping adresine giderek servise erişebilirsiniz. Ancak ağ düzenlemesi (docker network) yapılmadığı için çalışan container içinden dışarı (ne imajı çalıştıran host, ne de Internet) erişemezsiniz. Bunun için ypılması gerekenleri bilahare yazacağım.
+Internet tarayıcınızla <http://localhost/hostping> adresine giderek servise erişebilirsiniz. Ancak ağ düzenlemesi (docker network) yapılmadığı için çalışan container içinden dışarı (ne imajı çalıştıran host, ne de Internet) erişemezsiniz. Bunun için ypılması gerekenleri bilahare yazacağım.

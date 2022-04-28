@@ -2,7 +2,7 @@
 
 Yazılım teknolojileriyle iligi yaptığım çalışmaları, öğrendiklerimi, aldığım dersleri ve okumaları zaman zaman burada paylaşıyorum. Kapsamın yazılım teknolojilerine yeni başlayan ya da başlayacak olanlar için faydalı olacağını düşünüyorum.
 
-Çalışmaya yıllarca önce teknoloji öğrenmekle ilgili yaptığım denemeleri güncel geliştirme ortam ve araçlarına taşıyarak başlamaya karar verdim. Geliştirme ortamı olarak [VSCode](https://code.visualstudio.com)'u seçtim. Geçmişte  yoğun olarak kulllandığım [Vi](https://en.wikipedia.org/wiki/Vi), [Emacs](https://www.gnu.org/software/emacs/) ve [Eclipse](https://www.eclipse.org/ide/)'den sonra çalışma sürecini hızlandıran kolaylıklar sağlıyor. Ama temelde yapılan iş her zaman aynı. 
+Çalışmaya yıllarca önce teknoloji öğrenmekle ilgili yaptığım denemeleri güncel geliştirme ortam ve araçlarına taşıyarak başlamaya karar verdim. Geliştirme ortamı olarak [VSCode](https://code.visualstudio.com)'u seçtim. Geçmişte  yoğun olarak kulllandığım [Vi](https://en.wikipedia.org/wiki/Vi), [Emacs](https://www.gnu.org/software/emacs/) ve [Eclipse](https://www.eclipse.org/ide/)'den sonra çalışma sürecini hızlandıran kolaylıklar sağlıyor. Ama temelde yapılan iş her zaman aynı.
 
 1. Kodu yaz,
 2. Konfigürasyon kontrole gir,

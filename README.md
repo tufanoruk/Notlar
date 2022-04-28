@@ -1,6 +1,6 @@
 # Giriş
 
-Yazılım teknolojileriyle iligi yaptığım çalışmaları, öğrendiklerimi, aldığım dersleri ve okumaları burada paylaşıyorum. Kapsamın yazılım teknolojilerine yeni başlayan ya da başlayacak olanlar için faydalı olacağını düşünüyorum. Zira arkasında uzun senelerin tecrübesi var.
+Yazılım teknolojileriyle iligi yaptığım çalışmaları, öğrendiklerimi, aldığım dersleri ve okumaları zaman zaman burada paylaşıyorum. Kapsamın yazılım teknolojilerine yeni başlayan ya da başlayacak olanlar için faydalı olacağını düşünüyorum.
 
 Çalışmaya yıllarca önce teknoloji öğrenmekle ilgili yaptığım denemeleri güncel geliştirme ortam ve araçlarına taşıyarak başlamaya karar verdim. Geliştirme ortamı olarak [VSCode](https://code.visualstudio.com)'u seçtim. Geçmişte  yoğun olarak kulllandığım [Vi](https://en.wikipedia.org/wiki/Vi), [Emacs](https://www.gnu.org/software/emacs/) ve [Eclipse](https://www.eclipse.org/ide/)'den sonra çalışma sürecini hızlandıran kolaylıklar sağlıyor. Ama temelde yapılan iş her zaman aynı. 
 
@@ -25,6 +25,8 @@ Yazılım geliştiren bir kişinin programlama dili yanında mutlaka onun derley
 [Kodlama Pratiği](KodlamaPrati%C4%9Fi.md)
 
 [Yazılım Mühendisliği](Yaz%C4%B1l%C4%B1mM%C3%BChendisli%C4%9Fi.md)
+
+[Servis "Docker"laştırma](ServisDockerlaştırma.md)
 
 [Kaynaklar](Kaynaklar.md)
 

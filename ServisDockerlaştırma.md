@@ -10,11 +10,11 @@ Servis "Docker"laştırmayı öğrenmek için uzun zaman önce bir kaç teknoloj
 
 HostPing apache (ya da bezeri) webserver üzerinde çalışan, girilen IP/FQDN'e erişim kontrol ederek sonucu gösteren basit bir servis. Ön yüz (frontend) Twitter [bootstrap](https://getbootstrap.com/1.0.0/), [JQuery](https://jquery.com/) kullanıyor. Arka yüz (backend) Perl (perl ICMP root hakkı gerektirdiği için basit bir setuid sarmalayıcı -wrapper- uygulama ile tetiklenen) ile yazılmış "[Richardson  Maturity Level](https://martinfowler.com/articles/richardsonMaturityModel.html) 0" bir REST servisi.
 
-Bir servisi "docker"laştırmak için makinenizde docker kurulu olmasını vurgamlamaya gerk yok sanırım. İş temelde "docker build" komutuna sağlanacak "Docker file"ı yazmada. [VScode Docker eklentisi](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) "docker"laştırma çalışmalarına kolaylık sağlıyor. Makinenize yüklü imajları görebiliyorsunuz, çalıştırıp sonlandırabiliyorsunuz, çalışan "container"ın dizin yapısında dolaşabiliyor, dosya alıp yükleyebiliyorsunuz ve shell açabiliyorsunuz. Bunların hepsini "docker" komutu ile de yapmak mümkün. Hangisini terch ederseniz. Ben özellikle bir "container"ı çalıştırırken komut satırından parameterleri girme kolaylığı açısından komut satırını tercih ettim ama diğer işlemlerde VSCode Docker eklentisinin sağladığı kolaylıklardan faydalandım.
+Bir servisi "docker"laştırmak için makinenizde docker kurulu olmasını vurgamlamaya gerk yok sanırım. İş temelde "docker build" komutuna sağlanacak "Dockerfile"ı yazmada. [VScode Docker eklentisi](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) "docker"laştırma çalışmalarına kolaylık sağlıyor. Makinenize yüklü imajları görebiliyorsunuz, çalıştırıp sonlandırabiliyorsunuz, çalışan "container"ın dizin yapısında dolaşabiliyor, dosya alıp yükleyebiliyorsunuz ve shell açabiliyorsunuz. Bunların hepsini "docker" komutu ile de yapmak mümkün. Hangisini terch ederseniz. Ben özellikle bir "container"ı çalıştırırken komut satırından parameterleri girme kolaylığı açısından komut satırını tercih ettim ama diğer işlemlerde VSCode Docker eklentisinin sağladığı kolaylıklardan faydalandım.
 
-Bunun gibi basit, tek başına çalışan bir servisi "docker"laştırmak temelde [Docker File](https://docs.docker.com/engine/reference/builder/) yazılmasını içeriyor o kadar ("container"ın dışarı erişmesi için docker network tanımı da gerekiyor ama ondan daha sonra bahsedeceğim).
+Bunun gibi basit, tek başına çalışan bir servisi "docker"laştırmak temelde [Dockerfile](https://docs.docker.com/engine/reference/builder/) yazılmasını içeriyor o kadar ("container"ın dışarı erişmesi için docker network tanımı da gerekiyor ama ondan daha sonra bahsedeceğim).
 
-Docker File, seçeceğiniz temel bir docker imajına uygulamanızla ilgili dosyaları eklemek ve ayarları yapmaya olanak veriyor. "docker build" komutu ile de Docker File içide tanımlanan adımlar icra edilerek imaj oluşturuluyor. Bu imajı da herhangi uyumlu bir container çalıştırma ortamında çalıştırabiliyorsunuz.
+Dockerfile, seçeceğiniz temel bir docker imajına uygulamanızla ilgili dosyaları eklemek ve ayarları yapmaya olanak veriyor. "docker build" komutu ile de Dockerfile içide tanımlanan adımlar icra edilerek imaj oluşturuluyor. Bu imajı da herhangi uyumlu bir container çalıştırma ortamında çalıştırabiliyorsunuz.
 
 Öncelikle servisin bir geliştirme makinesinde çalışması için gerekli araç, modül ve dosyaları tespit etmek gerekti. Servis basit olduğu için bu pek zor olmadı. Gereken araçlar;
 
@@ -29,7 +29,7 @@ dosyalar
 - httpd.conf'a eklenecek (Include) servis konfigürasyon dosyası (hostping.conf)
 - ve proje dosyaları (perl backend uygulaması ve wrapper, hostping.html, js modülleri, css vs)
 
-Temel imaj olarak önce [apache httpd](https://hub.docker.com/_/httpd) imajını kullanmak istedim. Ancak imaja servisin çalışması için gerekli Perl modüllerinin ve derleme ortamının kurulmasının zorluğu nedeniyle temel [alpine linux](https://hub.docker.com/_/alpine) imajını tercih ettim. Ortaya çıkan Docker File aşağıda (en son hali için proje dizinine bakabilirsiniz).
+Temel imaj olarak önce [apache httpd](https://hub.docker.com/_/httpd) imajını kullanmak istedim. Ancak imaja servisin çalışması için gerekli Perl modüllerinin ve derleme ortamının kurulmasının zorluğu nedeniyle temel [alpine linux](https://hub.docker.com/_/alpine) imajını tercih ettim. Ortaya çıkan Dockerfile aşağıda (en son hali için proje dizinine bakabilirsiniz).
 
 ```Docker {.line-numbers}
 FROM alpine:3.15
@@ -67,11 +67,11 @@ CMD ["httpd", "-DFOREGROUND" ]
 
 17\. satırda da httpd uygulaması çalıştırılıyor.
 
-Container, Docker File'ın son ve tek olması gereken "CMD" satırını icra ettikten sonra sonlanıyor. Normalde daemon olarak arka planda (background) çalışması gereken httpd, container çalıştığına sonlanmaması için önplanda (foragroud) çalıştırılıyor.
+Container, Dockerfile'ın son ve tek olması gereken "CMD" satırını icra ettikten sonra sonlanıyor. Normalde daemon olarak arka planda (background) çalışması gereken httpd, container çalıştığına sonlanmaması için önplanda (foragroud) çalıştırılıyor.
 
 Imajın ufak olmasını sağlamak için oldukça küçük bir linux dağıtımından başlamış olsam da sonunda imaj büyüklüğü 244MB oldu!
 
-Yerel makinenize kopyaladığınız (git clone?, tar copy) projede Docker File'ın olduğu dizinde aşağıdaki komutla "docker container" imajını yaratabilirsiniz.
+Yerel makinenize kopyaladığınız (git clone?, tar copy) projede Dockerfile'ın olduğu dizinde aşağıdaki komutla "docker container" imajını yaratabilirsiniz.
 
 ```bash
 % docker build -t hostping:latest .

@@ -1,4 +1,4 @@
-#Kodlama Pratiği
+# Kodlama Pratiği
 
 Kodlama becerilerini geliştirmek / hatırlamak için bir çok kaynak mevcut. Bazıları [Hackerrank](https://www.hackerrank.com), [Codesignal](https://codesignal.com), [LeetCode](https://leetcode.com), [AlgoExpert](https://www.algoexpert.io). Bir çok firma işe alım süreçlerinde bu sitelerden programlama becerileri (özellikle problem çözümünü bulma ve bunu seçtiği programala dilinde gelliştirme şeklinde) sınavı yapmak için faydalanıyor. Tabi bu sınavlar zaman limitli oluyor.
 

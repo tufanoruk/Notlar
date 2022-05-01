@@ -58,7 +58,7 @@ CMD ["httpd", "-DFOREGROUND" ]
 
 7-9. satırlarda uygulama içeriği imajda uygun yerlere kopyalanıyor.
 
-10-12. satırlarda Perl arkayüz uygumalasını setuid olarak çalıştıracak C kodu derleniyor.
+10-12. satırlarda Perl arkayüz uygulamasını setuid olarak çalıştıracak C kodu derleniyor.
 
 13\. satırda derleme ortamı imajdan kaldırılıyor.
 
@@ -85,3 +85,7 @@ Yapılan imaj aşağıdaki komutla çalıştırılır
 ```
 
 Internet tarayıcınızla <http://localhost/hostping> adresine giderek servise erişebilirsiniz. Ancak ağ düzenlemesi (docker network) yapılmadığı için çalışan container içinden dışarı (ne imajı çalıştıran host, ne de Internet) erişemezsiniz. Bunun için yapılması gerekenleri bilahare yazacağım.
+
+"Docker container"ın dış dünyaya erişimin sağlamanın kolyay yolu "--network host" kullanmak. Ancak bu sadece Linux host makinelerinde destekleniyor Windows ve MacOS makinelerde kolay bir yolunu en azından ben bulamadım.(ipvlan ve macvlan seçenekeleri var ancak onları deneyip başarılı olan bir uygulama bulamadım 4/30).
+
+VirtualBox gibi sanal makinelerden dış dünyaya erişmek mümkün. Bu nedenle bir "Vagrant Linux box" içinde "container"ı oluşturup (build) "nost networking" ile çalıştırarak "container"ın dışarı erişmesini sağlayabildim. 

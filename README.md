@@ -30,7 +30,14 @@ Yazılım geliştiren bir kişinin programlama dili yanında mutlaka onun derley
 
 ["Vagrant Box"da "Docker Container"](VagrantlaDocker.md)
 
+[Modern C++ (C++14)](ModernC++.md)
+
+---
+
+
 [Kaynaklar](Kaynaklar.md)
+
+---
 
 [Projelerden seçmeler](https://github.com/tufanoruk)
 | Proje | Teknoloji | Not

@@ -2,9 +2,9 @@
 
 "Docker Container"ı [Vagrant](https://www.vagrantup.com) box ile derleyip çalıştırma ile iligli notlarımı burada toparladım.
 
-Öncelike neden buna ihtiyaç duyduğumu açıklayayım. Kullanılabilecek [Docker ağ](https://docs.docker.com/network/) seçenekleri Linux host makinelerinde daha zengin. Windows ve MacOS makinelerinde sadece "bridge" ağ sağlıklı çalışırken Linux host makinlerinde "host", "ipvlan", "macvlan" gibi diğer ağ kofigürasyonları da başarılı şekilde çalışıyor. "bridge" ağ yapısında olan bir "container" sadece o "bridge"e bağlı diğer "cotainer"larla haberleşebiliyor. Dış dünyaya (çalıştığı host dahil) erişemiyor.
+Öncelike neden buna ihtiyaç duyduğumu açıklayayım. Kullanılabilecek [Docker ağ](https://docs.docker.com/network/) seçenekleri Linux host makinelerinde daha zengin. Windows ve MacOS makinelerinde sadece "bridge" ağ sağlıklı çalışırken Linux host makinlerinde "host", "ipvlan", "macvlan" gibi diğer ağ konfigürasyonları da başarılı şekilde çalışıyor. "bridge" ağ yapısında olan bir "container" sadece o "bridge"e bağlı diğer "container"larla haberleşebiliyor. Dış dünyaya (çalıştığı host dahil) erişemiyor.
 
-Öğrenme amaçlı "dockerize" ettiğim [HostPing](https://github.com/tufanoruk/HostPing) servisinin dış dünyaya (Internet) erişimi gerekiyor. Bunu MacOS bir host makinede sağlamanın kolay yolu dockerize HostPing servisini Linux bir Vagrant box üzerinde çalışıtırmak, zira "[docker host networking](https://docs.docker.com/network/host/)" MacOS'da (ve Windows'da) çalışmıyor.  Büyük ihtimalle bu yapı Windows host makinlerle de çalışacaktır. 
+Öğrenme amaçlı "dockerize" ettiğim [HostPing](https://github.com/tufanoruk/HostPing) servisinin dış dünyaya (Internet) erişimi gerekiyor. Bunu MacOS bir host makinede sağlamanın kolay yolu dockerize HostPing servisini Linux bir Vagrant box üzerinde çalıştırmak, zira "[docker host networking](https://docs.docker.com/network/host/)" MacOS'da (ve Windows'da) çalışmıyor.  Büyük ihtimalle bu yapı Windows host makinlerle de çalışacaktır. 
 
 Yapılması gereken sadece uygun bir Vagrantfile yazılması. [HostPing](https://github.com/tufanoruk/HostPing) için olanı aşağıda paylaşıyorum. 
 
